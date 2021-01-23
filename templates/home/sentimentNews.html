@@ -1,0 +1,21 @@
+{% extends 'home/news.html' %}
+
+{% block newsContent %}
+
+{% for l in news_content %}
+<div class="mx-5 mt-5 px-5">
+    <div class="alert alert-primary px-5" style="width: 900px;" role="alert">
+        <h4 class="alert-heading">{{l.0}}</h4>
+        {% if l.1|cut:" " == "Positive" %}
+            <p class="btn btn-success disabled">{{l.1}}</p>
+        {% elif l.1|cut:" " == "Negative" %}   
+            <p class="btn btn-danger disabled">{{l.1}}</p>
+        {% elif l.1|cut:" " == "Neutral" %}
+            <p class="btn btn-warning disabled">{{l.1}}</p>
+        {% endif %}
+        <p>{{l.2}}</p>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock newsContent %}

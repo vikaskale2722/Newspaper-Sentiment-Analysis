@@ -1,0 +1,28 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="row mt-5">
+    <div class="col-sm-4 px-5 ml-5">
+        <a href="readNews?cat=0" class="btn btn-primary">National News</a><br>
+        <a href="readNews?cat=1" class="btn btn-primary my-3">International News</a><br>
+        <!-- <a href="{% url 'read_news'%}" class="btn btn-primary">State News</a><br> -->
+        <a href="readNews?cat=2" class="btn btn-primary ">Science News</a><br>
+        <a href="readNews?cat=3" class="btn btn-primary my-3">Business News</a>
+    </div>
+
+    <div class="col-sm-6 ml-5 pl-5">
+        <div class="alert alert-info offset-sm-2 content" role="alert">
+            <h4 class="alert-heading">How to Use</h4>
+            <hr>
+            <p>We help you analyze the news articles from <strong>"The Hindu"</strong> newspaper</p>
+            <p>There are various sections of news on your left</p>
+            <h5>Select any one of your choice</h5>
+            <p>We will show you the top headlines of any particular field and also provide the sentimental
+                analysis of that news article.</p>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
